@@ -26,3 +26,23 @@ public class Solution
 }
 // @lc code=end
 
+//查看了官方题解后得到的快慢指针写法，其实跟我一开始写的一样
+// @lc code=start
+public class Solution
+{
+    public int RemoveDuplicates(int[] nums)
+    {
+        int length = nums.Length;
+        int fast = 0, slow = 0;
+        while(fast < n) {
+            if(nums[fast] != nums[slow]) 
+            {
+                nums[++slow] = nums[fast];
+            }
+            fast++;
+        }
+        return slow;
+    }
+}
+// @lc code=end
+
