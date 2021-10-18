@@ -5,7 +5,7 @@
  */
 
 // @lc code=start
-//暴力枚举，hash解法在hash表章节展示
+//暴力枚举
 public class Solution
 {
     public int[] TwoSum(int[] nums, int target)
@@ -24,6 +24,26 @@ public class Solution
             }
         }
         return res;
+    }
+}
+// @lc code=end
+
+// @lc code=start
+//hasht解法
+public class Solution
+{
+    public int[] TwoSum(int[] nums, int target)
+    {
+        var dic = new Dictionary<int, int>();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (dic.ContainsKey(target - nums[i]))
+            {
+                return new int[] { dic[target - nums[i]], i };
+            }
+            else dic[nums[i]] = i;
+        }
+        return new int[] { -1, -1 };
     }
 }
 // @lc code=end
