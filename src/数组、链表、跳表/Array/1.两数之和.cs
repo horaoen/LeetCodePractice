@@ -29,7 +29,7 @@ public class Solution
 // @lc code=end
 
 // @lc code=start
-//hasht解法
+//hash解法
 public class Solution
 {
     public int[] TwoSum(int[] nums, int target)
